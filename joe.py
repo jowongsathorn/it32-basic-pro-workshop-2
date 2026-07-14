@@ -4,9 +4,12 @@ sell = int(input("ราคาที่จะนำไปขายต่อ"))
 teammembers = int(input("จำนวนลูกน้อง"))
 
 total = quantity * cost
-total2 = sell * teammembers
-profit = total+total2
+profit = (sell - cost) * quantity
+boss = profit * 0.2
+real_profit = profit - boss
+teammembers_profit = real_profit / teammembers
 print (f"ต้นทุน{total} ")
-print (f"ราคาขาย{total2}")
+print (f"ราคาขาย{sell}")
 print (F"กำไรสุทธิ{profit}")
-print (F"")
+print (F"รายได้ของหัวหน้า{boss}")
+print (F"รายได้ของลูกน้อง{teammembers_profit}")
